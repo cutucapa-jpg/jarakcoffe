@@ -313,3 +313,41 @@ function aturHalaman() {
 window.addEventListener("hashchange", aturHalaman); 
 simpanKeranjang(); 
 aturHalaman(); 
+
+// ===== LIHAT DAN SEMBUNYIKAN PASSWORD =====
+
+const passwordInput = document.getElementById("isian-password");
+const tombolMata = document.getElementById("lihat-password");
+
+if (passwordInput && tombolMata) {
+    tombolMata.addEventListener("click", function () {
+        const tampil = passwordInput.type === "password";
+
+        passwordInput.type = tampil ? "text" : "password";
+
+        tombolMata.innerHTML = tampil
+            ? `<svg xmlns="http://www.w3.org/2000/svg"
+                width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 3l18 18"/>
+                <path d="M10.6 10.6a2 2 0 0 0 2.8 2.8"/>
+                <path d="M9.9 5.2A10.5 10.5 0 0 1 12 5c5.5 0 9 7 9 7a15.5 15.5 0 0 1-3 3.8"/>
+                <path d="M6.6 6.6C4 8.3 3 12 3 12s3.5 7 9 7c1 0 2-.2 2.9-.6"/>
+            </svg>`
+            : `<svg xmlns="http://www.w3.org/2000/svg"
+                width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+                <circle cx="12" cy="12" r="3"/>
+            </svg>`;
+
+        tombolMata.setAttribute(
+            "aria-label",
+            tampil ? "Sembunyikan password" : "Lihat password"
+        );
+    });
+}

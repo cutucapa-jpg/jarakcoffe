@@ -191,10 +191,34 @@
                         <p class="pesan-galat">Username wajib diisi.</p> 
                     </div>
 
-                    <div class="kolom-isian">
-                        <!-- Fitur isian password dan pesan login salah -->
-                        <label for="isian-password">Password</label> 
-                        <input type="password" id="isian-password" autocomplete="current-password" required> 
+                     <div class="kolom-isian">
+    <label for="isian-password">Password</label>
+
+    <div class="password-wrapper">
+        <input
+            type="password"
+            id="isian-password"
+            autocomplete="current-password"
+            required
+        >
+
+        <button
+            type="button"
+            id="lihat-password"
+            class="tombol-mata"
+            aria-label="Lihat password"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg"
+                width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+                <circle cx="12" cy="12" r="3"/>
+            </svg>
+        </button>
+    </div>
+    
                         <p class="pesan-galat">Password wajib diisi.</p> 
                         <p class="pesan-galat" id="login-salah" hidden>Username atau password salah 😂.</p> 
                     </div>
@@ -385,7 +409,7 @@
  
             <div class="sukses" id="isi-sukses"> 
                 <!-- Fitur pesan pesanan berhasil dibuat --> 
-                <div class="sukses-ikon" aria-hidden="true">😍💕</div> 
+                <div class="sukses-ikon" aria-hidden="true">SELAMAT</div> 
                 <h1>Pesanan berhasil dibuat!</h1> 
                 <p id="sukses-pemesan"></p> 
                 <!-- Fitur rincian pesanan yang baru dibuat --> 
@@ -420,8 +444,12 @@
                                  <h2 class="kaki-judul">Jam buka &amp; kontak</h2>
                                  <dl class="kaki-daftar">
                                      <div>
-                                         <dt>Senin - Minggu</dt>
-                                         <dd>10.00 - 23.00 WIB</dd>
+                                         <dt>Senin - Jumat</dt>
+                                         <dd>10.00 - 22.00 WIB</dd>
+                                     </div>
+                                     <div>
+                                         <dt>Sabtu - Minggu</dt>
+                                         <dd>10.00 - 23.00</dd>
                                      </div>
                                  </dl>
                                  <p class="kaki-info">Pesan online, langsung di antar</p>

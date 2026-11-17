@@ -38,11 +38,11 @@ format("truetype");
 /* ===== FITUR WARNA ===== */ 
 :root { 
 --hijau-tua: #153b17; 
---hijau: #8dc29f; 
---hijau-muda: #d1ffe3e5; 
---aksen: #22180f; 
---aksen-terang: #ffffff; 
---krem: #000000; 
+--hijau: #fae3cb; 
+--hijau-muda: #2e4a39e5; 
+--aksen: #dfd5cc; 
+--aksen-terang: #ffe2d1; 
+--krem: #f4efe6; 
 --krem-tua: #f1d7b5; 
 --putih: #ffffff; 
 --teks: #000000; 
@@ -373,9 +373,9 @@ display: inline-flex;
 align-items: center; 
 gap: 6px; 
 padding: 8px 12px; 
-border: 1px solid var(--hijau-muda); 
+border: 1px solid var(--krem); 
 border-radius: 8px; 
-background: var(--hijau); 
+background: var(--hijau-tua); 
 color: var(--krem); 
 font-size: 0.85rem; 
 font-weight: 600; 
@@ -1679,4 +1679,26 @@ padding-right: 10px;
 .sukses { 
   padding: 20px 12px; 
 } 
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.tombol-mata {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
 }
